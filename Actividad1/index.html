@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoEstructuras | Construcción Sostenible</title>
+    <link rel="icon" type="image/png" href="/src/images/favicon.png">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <meta name="description" content="Empresa del sector secundario dedicada a la construcción sostenible.">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1>EcoEstructuras</h1>
+                <p class="slogan">Ingeniería y Construcción Sostenible</p>
+            </div>
+            <nav class="navbar">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="nosotros" class="seccion-nosotros">
+            <div class="container">
+                <div class="intro">
+                    <h2>Quiénes Somos</h2>
+                    <p>Somos una empresa líder del <strong>sector secundario</strong>, especializada en transformar materias primas en edificaciones seguras, modernas y respetuosas con el medio ambiente.</p>
+                </div>
+
+                <div class="mision-vision-grid">
+                    <article class="card-mv">
+                        <h3>Nuestra Misión</h3>
+                        <p>Desarrollar infraestructuras de alta calidad utilizando materiales ecológicos, garantizando la seguridad y el confort de nuestros clientes mientras cuidamos el planeta.</p>
+                    </article>
+
+                    <article class="card-mv">
+                        <h3>Nuestra Visión</h3>
+                        <p>Ser reconocidos en 2030 como la constructora más innovadora de la región, liderando el cambio hacia una arquitectura 100% sustentable.</p>
+                    </article>
+                </div>
+                <button id="colorButton" class="button-angel">Change Color</button>
+
+            </div>
+        </section>
+
+        <section id="proyectos" class="seccion-proyectos">
+            <div class="container">
+                <h2>Nuestros Proyectos</h2>
+                <div class="grid-proyectos">
+                    <article class="proyecto-item">
+                        <img src="/src/images/torre.jpg" alt="Fachada de edificio con paneles solares">
+                        <div class="info-proyecto">
+                            <h3>Torre Solar</h3>
+                            <p>Complejo de oficinas corporativas alimentado 100% por energía solar.</p>
+                        </div>
+                    </article>
+
+                    <article class="proyecto-item">
+                        <img src="/src/images/puente.jpg" alt="Puente peatonal rodeado de naturaleza">
+                        <div class="info-proyecto">
+                            <h3>Puente Conexión</h3>
+                            <p>Infraestructura vial que conecta zonas urbanas reduciendo el tráfico en un 40%.</p>
+                        </div>
+                    </article>
+
+                    <article class="proyecto-item">
+                        <img src="/src/images/casas.jpeg" alt="Casas residenciales con jardines">
+                        <div class="info-proyecto">
+                            <h3>Residencial Los Robles</h3>
+                            <p>Conjunto de 50 viviendas familiares construidas con concreto reciclado.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion-contacto">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p style="text-align: center; margin-bottom: 20px;">¿Tienes un proyecto en mente? Escríbenos.</p>
+                
+                <form action="#" class="formulario">
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Detalles de tu proyecto..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 EcoEstructuras. Todos los derechos reservados.</p>
+            <div class="redes-sociales">
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+    const colorButton = document.getElementById('colorButton');
+
+    colorButton.addEventListener('click', function() {
+        if (document.body.style.backgroundColor === 'rgb(5, 187, 247)') {
+            document.body.style.backgroundColor = ''; 
+        } else {
+            document.body.style.backgroundColor = 'rgb(5, 187, 247)'; 
+        }
+    });
+</script>
+
+</body>
+</html>
