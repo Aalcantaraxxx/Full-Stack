@@ -19,7 +19,7 @@
     --badge-med-bg: #fef3c7; --badge-med-text: #92400e;
     --badge-low-bg: #d1fae5; --badge-low-text: #065f46;
 }
-
+ 
 /*  Modo Oscuro */
 [data-theme="dark"] {
     --bg-app: #0f172a; 
