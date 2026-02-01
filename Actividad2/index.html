@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Task Manager</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="material-symbols-outlined logo-icon">grid_view</span>
+                <h2>Angel Task Manager</h2>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" id="nav-board" class="active" onclick="app.switchView('board')">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Tablero Principal
+                </a>
+                <a href="#" id="nav-calendar" onclick="app.switchView('calendar')">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                    Calendario
+                </a>
+                <a href="#" id="nav-settings" onclick="app.switchView('settings')">
+                    <span class="material-symbols-outlined">settings</span>
+                    Configuración
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="breadcrumbs">
+                    <span>Espacio de Trabajo</span> / <span id="current-view-name" class="current">Tablero Principal</span>
+                </div>
+                <button id="btn-nueva-tarea" class="btn-primary">
+                    <span class="material-symbols-outlined">add</span>
+                    Nueva Tarea
+                </button>
+            </header>
+
+            <div id="view-board" class="view-section">
+                <div class="kanban-container">
+                    <div class="kanban-column" id="col-todo" ondrop="app.drop(event, 'todo')" ondragover="app.allowDrop(event)">
+                        <div class="column-header">
+                            <div class="header-title">
+                                <span class="status-dot dot-todo"></span>
+                                <h3>Por Hacer</h3>
+                                <span class="counter" id="count-todo">0</span>
+                            </div>
+                        </div>
+                        <div class="task-container" id="list-todo"></div>
+                    </div>
+
+                    <div class="kanban-column" id="col-inprogress" ondrop="app.drop(event, 'inprogress')" ondragover="app.allowDrop(event)">
+                        <div class="column-header">
+                            <div class="header-title">
+                                <span class="status-dot dot-progress"></span>
+                                <h3>En Curso</h3>
+                                <span class="counter" id="count-inprogress">0</span>
+                            </div>
+                        </div>
+                        <div class="task-container" id="list-inprogress"></div>
+                    </div>
+
+                    <div class="kanban-column" id="col-done" ondrop="app.drop(event, 'done')" ondragover="app.allowDrop(event)">
+                        <div class="column-header">
+                            <div class="header-title">
+                                <span class="status-dot dot-done"></span>
+                                <h3>Finalizado</h3>
+                                <span class="counter" id="count-done">0</span>
+                            </div>
+                        </div>
+                        <div class="task-container" id="list-done"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-calendar" class="view-section hidden">
+                <div class="calendar-layout">
+                    <h2>Agenda de Entregas</h2>
+                    <div id="calendar-list" class="calendar-list">
+                        </div>
+                </div>
+            </div>
+
+            <div id="view-settings" class="view-section hidden">
+                <div class="settings-container">
+                    <h2>Preferencias del Sistema</h2>
+                    
+                    <div class="setting-card">
+                        <div class="setting-info">
+                            <h3>Apariencia</h3>
+                            <p>Alternar entre modo claro y modo oscuro para reducir la fatiga visual.</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <label for="theme-toggle"></label>
+                        </div>
+                    </div>
+
+                    <div class="setting-card">
+                        <div class="setting-info">
+                            <h3>Datos del Sistema</h3>
+                            <p>Borrar todas las tareas y reiniciar la aplicación a estado de fábrica.</p>
+                        </div>
+                        <button class="btn-secondary" onclick="app.clearAllData()">Restablecer Todo</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Crear Nueva Tarea</h3>
+                <button id="btn-close-modal" class="btn-icon">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Título de la tarea</label>
+                    <input type="text" id="input-title" placeholder="Ej. Integración de API de pagos">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Prioridad</label>
+                        <select id="input-priority">
+                            <option value="low">Baja</option>
+                            <option value="medium" selected>Media</option>
+                            <option value="high">Alta</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha de Entrega</label>
+                        <input type="date" id="input-date">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <textarea id="input-desc" rows="4" placeholder="Detalles técnicos..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btn-cancel" class="btn-secondary">Cancelar</button>
+                <button id="btn-save" class="btn-primary">Crear Tarea</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/app.js"></script>
+</body>
+</html>
