@@ -38,13 +38,34 @@ Seguimiento en tiempo real del estatus de las actividades y retos del curso.
 | **Actividad 3** | ![In Progress](https://img.shields.io/badge/EN_PROGRESO-blue?style=flat-square&logo=clock&logoColor=white) | *Próximamente* |
 | **Actividad 4** | ![Todo](https://img.shields.io/badge/PENDIENTE-lightgrey?style=flat-square&logo=hourglass&logoColor=gray) | --- |
 | **Actividad 5** | ![Todo](https://img.shields.io/badge/PENDIENTE-lightgrey?style=flat-square&logo=hourglass&logoColor=gray) | --- |
-| **Avance de Reto** | ![Done](https://img.shields.io/badge/ENTREGADA-success?style=flat-square&logo=checkmark&logoColor=white) | [Ver Avance ↗](https://aalcantaraxxx.github.io/Full-Stack/BecasTec/) |
+| **Avance de Reto** | ![Done](https://img.shields.io/badge/ENTREGADA-success?style=flat-square&logo=checkmark&logoColor=white) | [Ver Plataforma ↗](https://becas.tec.protesispiernas.com/) |
 | **Entrega Final** | ![Todo](https://img.shields.io/badge/PENDIENTE-lightgrey?style=flat-square&logo=hourglass&logoColor=gray) | --- |
 | **Presentación** | ![Todo](https://img.shields.io/badge/PENDIENTE-lightgrey?style=flat-square&logo=hourglass&logoColor=gray) | --- |
 
 ---
 
 ## 🚀 Proyectos Destacados
+
+### 🔹 Becas TEC Platform (Avance de Reto)
+Sistema integral Full Stack para la gestión y solicitud de becas estudiantiles, desplegado en infraestructura propia.
+
+> **Características Clave:**
+> * **Frontend:** React + Tailwind.
+> * **Backend:** Node.js + Express con conexión a MySQL.
+> * **Infraestructura:** VPS privado y uso de Docker.
+> * **Seguridad:** Autenticación robusta y protección de rutas.
+
+| Vista Home | Vista Panel Diseñador|
+| :---: | :---: |
+| <img src="https://raw.githubusercontent.com/Aalcantaraxxx/Becas-TEC-Platform/main/img/Home.png" width="400" alt="Vista Home"> | <img src="https://raw.githubusercontent.com/Aalcantaraxxx/Becas-TEC-Platform/main/img/Diseñador.png" width="400" alt="Vista Diseñador"> |
+
+<div align="center">
+  <a href="https://becas.tec.protesispiernas.com/" target="_blank">
+    <img src="https://img.shields.io/badge/VISITAR_PLATAFORMA_EN_VIVO-059669?style=for-the-badge&logo=server&logoColor=white" alt="Live Demo" />
+  </a>
+</div>
+
+<br>
 
 ### 🔹 Angel Task Manager (Actividad 2)
 Aplicación de gestión de tareas basada en metodología Kanban.
