@@ -57,7 +57,7 @@ Sistema integral Full Stack para la gestión y solicitud de becas estudiantiles,
 
 | Vista Home | Vista Panel Diseñador|
 | :---: | :---: |
-| <img src="hhttps://raw.githubusercontent.com/Aalcantaraxxx/Full-Stack/refs/heads/main/Actividad2/img/Home.png" width="400" alt="Vista Home"> | <img src="https://raw.githubusercontent.com/Aalcantaraxxx/Full-Stack/refs/heads/main/Actividad2/img/Dise%C3%B1ador.png" width="400" alt="Vista Diseñador"> |
+| <img src="https://raw.githubusercontent.com/Aalcantaraxxx/Full-Stack/refs/heads/main/Actividad2/img/Home.png" width="400" alt="Vista Home"> | <img src="https://raw.githubusercontent.com/Aalcantaraxxx/Full-Stack/refs/heads/main/Actividad2/img/Dise%C3%B1ador.png" width="400" alt="Vista Diseñador"> |
 
 <div align="center">
   <a href="https://becas.tec.protesispiernas.com/" target="_blank">
